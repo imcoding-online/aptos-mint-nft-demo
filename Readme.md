@@ -1,6 +1,6 @@
 # NFT minting demo on Aptos network
 
-More detailed guide [here](https://imcoding.online/tutorials/how-to-publish-and-mint-nft-on-aptos).
+More detailed guide [here](https://imcoding.online/tutorials/how-to-implement-mint-allowlist-on-aptos).
 
 ## publish the module
 
@@ -19,8 +19,21 @@ resource account: "e678abebea551c752030dfe6c78147e62b393b74163a4f167ab3444e0eda5
 tx: "0x1233ab41de4c5b8346b7110b3f163ab835c24265bd93c7e2c99cd0b287af9ed2"!
 ```
 
+## generate proof signature
+
+```shell
+$ cd example/proof-signature-generate
+$ npm run generate
+```
+
+The console will output the proof signature for account `35a18f9201d2d6a9e3c86c4b9a00cb4444129cd2dc2fff72719240f8cb394016`.
+
+```shell
+f094a82ec993a1dab09ce249d6e859afd3f2255103cfb3c47867af329bfd494980a7693dc104bc23b320dfa406e66818c160f50dfedf881bdd31e55fa86a9402
+```
+
 ## mint an NFT
 
 ```shell
-$ aptos move run --function-id 0xe678abebea551c752030dfe6c78147e62b393b74163a4f167ab3444e0eda55a9::minting::mint_nft
+$ aptos move run --function-id 0xe678abebea551c752030dfe6c78147e62b393b74163a4f167ab3444e0eda55a9::minting::mint_nft --args hex:f094a82ec993a1dab09ce249d6e859afd3f2255103cfb3c47867af329bfd494980a7693dc104bc23b320dfa406e66818c160f50dfedf881bdd31e55fa86a9402
 ```
