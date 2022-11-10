@@ -26,14 +26,15 @@ $ cd example/proof-signature-generate
 $ npm run generate
 ```
 
-The console will output the proof signature for account `35a18f9201d2d6a9e3c86c4b9a00cb4444129cd2dc2fff72719240f8cb394016`.
+The console will output the proof signature for account `35a18f9201d2d6a9e3c86c4b9a00cb4444129cd2dc2fff72719240f8cb394016` with off-chain user id `2333333`.
 
 ```shell
-f094a82ec993a1dab09ce249d6e859afd3f2255103cfb3c47867af329bfd494980a7693dc104bc23b320dfa406e66818c160f50dfedf881bdd31e55fa86a9402
+identitifer: 32333333333333
+977cf82a1f86879a0be90e33d72ec68b9c787a47ccfdd979d4735c25faf3ff8a469f3f40bbdb09eb7cb21bfcff79c4401d779d3172cb52fa9996c11b2366810b
 ```
 
 ## mint an NFT
 
 ```shell
-$ aptos move run --function-id 0xe678abebea551c752030dfe6c78147e62b393b74163a4f167ab3444e0eda55a9::minting::mint_nft --args hex:f094a82ec993a1dab09ce249d6e859afd3f2255103cfb3c47867af329bfd494980a7693dc104bc23b320dfa406e66818c160f50dfedf881bdd31e55fa86a9402
+$ aptos move run --function-id 0xe678abebea551c752030dfe6c78147e62b393b74163a4f167ab3444e0eda55a9::minting::mint_nft --args hex:32333333333333 --args hex:f094a82ec993a1dab09ce249d6e859afd3f2255103cfb3c47867af329bfd494980a7693dc104bc23b320dfa406e66818c160f50dfedf881bdd31e55fa86a9402
 ```
