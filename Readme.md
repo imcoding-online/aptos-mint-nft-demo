@@ -1,6 +1,6 @@
 # NFT minting demo on Aptos network
 
-More detailed guide [here](https://imcoding.online/tutorials/how-to-implement-mint-allowlist-on-aptos).
+More detailed guide [here](https://imcoding.online/tutorials/how-to-set-token-index-on-aptos).
 
 ## publish the module
 
